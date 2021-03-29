@@ -1,0 +1,962 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5E86D096-8672-49FC-832D-23C8D14E15C3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SimCityPak</RootNamespace>
+    <AssemblyName>SimCityPak</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>%24/simcitypak/SimCityPak/SimCityPak</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>https://tfs.codeplex.com/tfs/tfs30</SccAuxPath>
+    <SccProvider>{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}</SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>0.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\SCP_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ColorPicker">
+      <HintPath>..\References\ColorPicker.dll</HintPath>
+    </Reference>
+    <Reference Include="ColorPickerControls">
+      <HintPath>..\References\ColorPickerControls.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2012.1.1.35984, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf.Input, Version=2013.1.10.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\HelixToolkit.Wpf.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Xna\x86\Microsoft.Xna.Framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\Xna\x86\Microsoft.Xna.Framework.Graphics.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.90.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>F:\Program Files\System.Data.SQLite\2012\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WriteableBitmapEx.Wpf, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\WriteableBitmapEx.Wpf.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AppClipboard.cs" />
+    <Compile Include="EffectsDirectory\EffectsDirectory.cs" />
+    <Compile Include="GraphicsHelpers\QuantizedSignedDistanceFieldGenerator.cs" />
+    <Compile Include="GraphicsHelpers\SignedDistanceFieldGenerator.cs" />
+    <Compile Include="PackageReader\DataBaseIndexData.cs" />
+    <Compile Include="ExtensionMethods\ExtensionMethods.cs" />
+    <Compile Include="GraphicsHelpers\DDSLib.cs" />
+    <Compile Include="GraphicsHelpers\GraphicsDeviceService.cs" />
+    <Compile Include="NameRegistry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PackageReader\DataBaseIndex.cs" />
+    <Compile Include="PackageReader\DatabaseManager.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFileArrayPropertyAttribute.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFileObject.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFileObjectCollection.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFileObjectCollectionArray.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFilePropertyArrayAttribute.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFilePropertyAttribute.cs" />
+    <Compile Include="PackageReader\Helpers\PropertyFiles\PropertyFilePropertyAttributeBase.cs" />
+    <Compile Include="PackageReader\ModifiedDataBaseIndex.cs" />
+    <Compile Include="PackageReader\ObservableList.cs" />
+    <Compile Include="PackageReader\PackageConstants.cs" />
+    <Compile Include="PackageReader\Properties\ViewString8Property.xaml.cs">
+      <DependentUpon>ViewString8Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RenderWare4\Exporters\ColladaConverter.cs" />
+    <Compile Include="RenderWare4\Exporters\collada_schema_1_4.cs" />
+    <Compile Include="RenderWare4\Exporters\AdvancedColladaConverter.cs" />
+    <Compile Include="RenderWare4\Exporters\IConverter.cs" />
+    <Compile Include="RenderWare4\Textures\DXT8Image.cs" />
+    <Compile Include="RenderWare4\Textures\DXT5Image.cs" />
+    <Compile Include="RenderWare4\Textures\ITexture.cs" />
+    <Compile Include="RenderWare4\Exporters\WaveFrontOBJConverter.cs" />
+    <Compile Include="RenderWare4\ModelPack.cs" />
+    <Compile Include="RenderWare4\ModelUnpack.cs" />
+    <Compile Include="RenderWare4\OgreXmlReader.cs" />
+    <Compile Include="RenderWare4\OgreXmlWriter.cs" />
+    <Compile Include="RenderWare4\RW4Garbage.cs" />
+    <Compile Include="RenderWare4\RW4ModelExtensions.cs" />
+    <Compile Include="RenderWare4\RW4Model\Anim.cs" />
+    <Compile Include="RenderWare4\RW4Model\Buffer.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\Animations.cs" />
+    <Compile Include="RenderWare4\RW4Model\JointPose.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\MaterialTextureConverter.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\VertexComponent.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\IRW4Struct.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\ModelHandles.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\UnreferencedSection.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\Vertex.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Blob.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Header.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4HierarchyInfo.cs" />
+    <Compile Include="RenderWare4\RW4Model.cs" />
+    <Compile Include="RenderWare4\RW4Model\Matrices.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4BBox.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Material.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Mesh.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4MeshExtensions.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4MeshMaterialAssignment.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Object.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Section.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4SimpleMesh.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4Skeleton.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4TexMetaData.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4TriangleArray.cs" />
+    <Compile Include="RenderWare4\RW4Model\RW4VertexArray.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\Triangle.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\VertexFormat.cs" />
+    <Compile Include="RenderWare4\RW4Model\Minor Classes\TextureBlob.cs" />
+    <Compile Include="RenderWare4\Texture.cs" />
+    <Compile Include="RenderWare4\SectionTypeCodes.cs" />
+    <Compile Include="RenderWare4\Textures\RasterImage.cs" />
+    <Compile Include="TGIRegistry\LocaleRegistry.cs" />
+    <Compile Include="TGIRegistry\TGIRandomGenerator.cs" />
+    <Compile Include="TGIRegistry\TGITables\FileTypes.cs" />
+    <Compile Include="TGIRegistry\TGITables\Groups.cs" />
+    <Compile Include="TGIRegistry\TGITables\GroupTypes.cs" />
+    <Compile Include="TGIRegistry\TGITables\Instances.cs" />
+    <Compile Include="TGIRegistry\TGITables\InstanceTypes.cs" />
+    <Compile Include="TGIRegistry\TGITables\Properties.cs" />
+    <Compile Include="TemplateSelectors\LotEditorViewSelector.cs" />
+    <Compile Include="TemplateSelectors\PropertyViewSelector.cs" />
+    <Compile Include="TemplateSelectors\RW4ViewSelector.cs" />
+    <Compile Include="TGIRegistry\TGIRecord.cs" />
+    <Compile Include="TGIRegistry\TGITable.cs" />
+    <Compile Include="TGIRegistry\TGIRegistry.cs" />
+    <Compile Include="Views\AdvancedEditors\DecalDictionary\ViewDecalCreator.xaml.cs">
+      <DependentUpon>ViewDecalCreator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\DecalDictionary\ViewEditDecalDictionaryEntry.xaml.cs">
+      <DependentUpon>ViewEditDecalDictionaryEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\DecalDictionary\ViewDecalDictionary.xaml.cs">
+      <DependentUpon>ViewDecalDictionary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\LotEditorItemManipulator.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\LotEditorItemMarker.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitFile.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitPath.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitPathPoint.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitSimsSpawner.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewUnitEffect.xaml.cs">
+      <DependentUpon>ViewUnitEffect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\ILotEditorItem.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitDecal.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitEffect.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitLight.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\PropertyConstants.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitBinDraw.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\UnitTransform.cs" />
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewUnitBinDrawSlot.xaml.cs">
+      <DependentUpon>ViewUnitBinDrawSlot.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewUnitDecal.xaml.cs">
+      <DependentUpon>ViewUnitDecal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewUnitLight.xaml.cs">
+      <DependentUpon>ViewUnitLight.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewUnitLightGroup.xaml.cs">
+      <DependentUpon>ViewUnitLightGroup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\Path\ViewPath.xaml.cs">
+      <DependentUpon>ViewPath.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\Path\ViewPathEntry.xaml.cs">
+      <DependentUpon>ViewPathEntry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\Copy of ViewFloat4.xaml.cs">
+      <DependentUpon>Copy of ViewFloat4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewColorElement.xaml.cs">
+      <DependentUpon>ViewColorElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewColorElementItem.xaml.cs">
+      <DependentUpon>ViewColorElementItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewImageCrop.xaml.cs">
+      <DependentUpon>ViewImageCrop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewUByte4.xaml.cs">
+      <DependentUpon>ViewUByte4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewShort4N.xaml.cs">
+      <DependentUpon>ViewShort4N.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\VertexValueViews\ViewD3DColor.xaml.cs">
+      <DependentUpon>ViewD3DColor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\valueConverters\GroundTextureConverter.cs" />
+    <Compile Include="Views\valueConverters\InstanceTypeIconConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\BoolPropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\ColorPropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\UintPropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\Vector3PropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\FloatPropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\StringPropertyConverter.cs" />
+    <Compile Include="Views\valueConverters\Properties\KeyPropertyConverter.cs" />
+    <Compile Include="Views\ViewSQLExportImport.xaml.cs">
+      <DependentUpon>ViewSQLExportImport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditTransformProperty.xaml.cs">
+      <DependentUpon>ViewEditTransformProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\ViewMaterial.xaml.cs">
+      <DependentUpon>ViewMaterial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\ViewVertexFormat.xaml.cs">
+      <DependentUpon>ViewVertexFormat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\valueConverters\ColorToBrushConverter.cs" />
+    <Compile Include="Views\ViewAddProperty.xaml.cs">
+      <DependentUpon>ViewAddProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditTextProperty.xaml.cs">
+      <DependentUpon>ViewEditTextProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditBoundingBoxProperty.xaml.cs">
+      <DependentUpon>ViewEditBoundingBoxProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditVector4Property.xaml.cs">
+      <DependentUpon>ViewEditVector4Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\valueConverters\ByteArrayToIndexedHexStringConverter.cs" />
+    <Compile Include="Views\valueConverters\JSBeautify.cs" />
+    <Compile Include="Views\valueConverters\StringToJS.cs" />
+    <Compile Include="Views\PropertyViews\ViewBasicProperty.xaml.cs">
+      <DependentUpon>ViewBasicProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\ViewBooleanProperty.xaml.cs">
+      <DependentUpon>ViewBooleanProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditKeyProperty.xaml.cs">
+      <DependentUpon>ViewEditKeyProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditVector2Property.xaml.cs">
+      <DependentUpon>ViewEditVector2Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\PropertyEditViews\ViewEditVector3Property.xaml.cs">
+      <DependentUpon>ViewEditVector3Property.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdvancedEditors\LotEditor\ViewLotEditor.xaml.cs">
+      <DependentUpon>ViewLotEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewEffectsDirectory.xaml.cs">
+      <DependentUpon>ViewEffectsDirectory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewHelpers\RasterImage.cs" />
+    <Compile Include="Views\ViewFNVNameHashImport.xaml.cs">
+      <DependentUpon>ViewFNVNameHashImport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewFNVNameHashScan.xaml.cs">
+      <DependentUpon>ViewFNVNameHashScan.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\viewHelpers\TargaImage.cs" />
+    <Compile Include="Views\ViewMiniResult.xaml.cs">
+      <DependentUpon>ViewMiniResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\ViewNumericProperty.xaml.cs">
+      <DependentUpon>ViewNumericProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewFNV.xaml.cs">
+      <DependentUpon>ViewFNV.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewHexDiff.xaml.cs">
+      <DependentUpon>ViewHexDiff.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewJavaScript.xaml.cs">
+      <DependentUpon>ViewJavaScript.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewRawImage.xaml.cs">
+      <DependentUpon>ViewRawImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewScanUnusedIDs.xaml.cs">
+      <DependentUpon>ViewScanUnusedIDs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\ViewStringProperty.xaml.cs">
+      <DependentUpon>ViewStringProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewTextFind.xaml.cs">
+      <DependentUpon>ViewTextFind.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewText.xaml.cs">
+      <DependentUpon>ViewText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\ViewColorProperty.xaml.cs">
+      <DependentUpon>ViewColorProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewAbout.xaml.cs">
+      <DependentUpon>ViewAbout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewInstanceRegistryRecord.xaml.cs">
+      <DependentUpon>ViewInstanceRegistryRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\viewModels\PropertyModel.cs" />
+    <Compile Include="Views\ViewRaster.xaml.cs">
+      <DependentUpon>ViewRaster.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ControlHex.xaml.cs">
+      <DependentUpon>ControlHex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewHex.xaml.cs">
+      <DependentUpon>ViewHex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyViews\ViewKeyProperty.xaml.cs">
+      <DependentUpon>ViewKeyProperty.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\ViewMesh.xaml.cs">
+      <DependentUpon>ViewMesh.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPropertyFile.xaml.cs">
+      <DependentUpon>ViewPropertyFile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPropertyRegistryRecord.xaml.cs">
+      <DependentUpon>ViewPropertyRegistryRecord.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewSearchProperties.xaml.cs">
+      <DependentUpon>ViewSearchProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewRW4.xaml.cs">
+      <DependentUpon>ViewRW4.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewPng.xaml.cs">
+      <DependentUpon>ViewPng.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateSelectors\ViewSelector.cs" />
+    <Compile Include="Views\ViewSettings.xaml.cs">
+      <DependentUpon>ViewSettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewTexture.xaml.cs">
+      <DependentUpon>ViewTexture.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewTga.xaml.cs">
+      <DependentUpon>ViewTga.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RW4SectionViews\ViewVertexArray.xaml.cs">
+      <DependentUpon>ViewVertexArray.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewWindow.xaml.cs">
+      <DependentUpon>ViewWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PackageReader\Properties\ViewString8Property.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\LotEditorResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\DecalDictionary\ViewDecalCreator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\DecalDictionary\ViewEditDecalDictionaryEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\DecalDictionary\ViewDecalDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewUnitEffect.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewUnitBinDrawSlot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewUnitDecal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewUnitLight.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewUnitLightGroup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\Path\ViewPath.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\Path\ViewPathEntry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\Copy of ViewFloat4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewColorElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewColorElementItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewImageCrop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewUByte4.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewShort4N.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RW4SectionViews\VertexValueViews\ViewD3DColor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewSQLExportImport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditTransformProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\ViewMaterial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\ViewVertexFormat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewAddProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditTextProperty.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditBoundingBoxProperty.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditVector4Property.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewBasicProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewBooleanProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditKeyProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditVector2Property.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\PropertyEditViews\ViewEditVector3Property.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvancedEditors\LotEditor\ViewLotEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewEffectsDirectory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewFNVNameHashImport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewFNVNameHashScan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewMiniResult.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewNumericProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewFNV.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewHexDiff.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewJavaScript.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewRawImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewScanUnusedIDs.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewStringProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewTextFind.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewText.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewColorProperty.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ViewAbout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewInstanceRegistryRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewRaster.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ControlHex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewHex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PropertyViews\ViewKeyProperty.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RW4SectionViews\ViewMesh.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewPropertyFile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewPropertyRegistryRecord.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewSearchProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewRW4.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewPng.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewTexture.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewTga.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RW4SectionViews\ViewVertexArray.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PackageReader\DataBasePackedFile.cs" />
+    <Compile Include="PackageReader\Helpers\ByteHelpers.cs" />
+    <Compile Include="PackageReader\Helpers\NumberHelpers.cs" />
+    <Compile Include="PackageReader\Helpers\StreamHelpers.cs" />
+    <Compile Include="PackageReader\Helpers\StringHelpers.cs" />
+    <Compile Include="PackageReader\Properties\ArrayProperty.cs" />
+    <Compile Include="PackageReader\Properties\ComplexProperty.cs" />
+    <Compile Include="PackageReader\Properties\Property.cs" />
+    <Compile Include="PackageReader\Properties\PropertyFile.cs" />
+    <Compile Include="PackageReader\Properties\Types\BoolProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\BoundingBoxProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\ColorRGBAProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\ColorRGBProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\FloatProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\Int32Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\KeyProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\String16Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\String8Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\TextProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\TransformProperty.cs" />
+    <Compile Include="PackageReader\Properties\Types\UInt32Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\Vector2Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\Vector3Property.cs" />
+    <Compile Include="PackageReader\Properties\Types\Vector4Property.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="database_main.s3db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="database_user.s3db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\checkered.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\edit.png" />
+    <Resource Include="Images\SCP_icon.ico" />
+    <Resource Include="Images\Simcitypaklogo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\ResourceViews\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lightbulb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lightning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_transform_move.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lightbulb_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lightbulb_copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_box_add.png" />
+    <Resource Include="Images\LotEditor\16x16_box_clone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_image_add.png" />
+    <Resource Include="Images\LotEditor\16x16_image_clone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lightning_add.png" />
+    <Resource Include="Images\LotEditor\16x16_lightning_clone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_eye.png" />
+    <Resource Include="Images\LotEditor\16x16_eye_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\16x16_dice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_RW4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_JPG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_JAVA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_PROP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_RAST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_DEFAULT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_AGENT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_PATH.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_MENU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_UNIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_MAP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_DESC.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_NETWORK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_CURS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_JSON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_BKHD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_WAV.png" />
+    <Resource Include="Images\InstanceTypeIcons\16x16_EA V.png" />
+    <Resource Include="Images\InstanceTypeIcons\16x16_GIF.png" />
+    <Resource Include="Images\InstanceTypeIcons\16x16_TGA.png" />
+    <Resource Include="Images\InstanceTypeIcons\16x16_CASC.png" />
+    <Resource Include="Images\InstanceTypeIcons\16x16_TRUE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_GREY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_EFFE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_C++.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_RULE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_BINA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_HTML.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\16x16_UKNO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\InstanceTypeIcons\PROP\16x16_DECALATLAS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\package.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nQuant.Core\nQuant.Core.csproj">
+      <Project>{A59307EA-FCB0-4110-BC42-0417871C24C4}</Project>
+      <Name>nQuant.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_lot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\16x16_sim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\LotEditor\GroundTextures\0.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\1.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\10.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\11.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\12.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\13.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\14.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\15.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\2.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\3.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\4.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\5.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\6.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\7.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\8.png" />
+    <Resource Include="Images\LotEditor\GroundTextures\9.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

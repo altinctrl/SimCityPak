@@ -1,0 +1,31 @@
+﻿<Window x:Class="SimCityPak.Views.ViewSearchProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Search Properties" Height="336.917" Width="568.04" Closing="Window_Closing" MinWidth="540">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" Name="dataGridInstances" Margin="10,92,10.168,10.812" SelectionChanged="dataGridInstances_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="TypeName" Binding="{Binding TypeName}"  Width="*" FontFamily="Courier New" />
+                <DataGridTextColumn Header="GroupContainer" Binding="{Binding GroupName}" Width="*"  FontFamily="Courier New" />
+                <DataGridTextColumn Header="InstanceId" Binding="{Binding InstanceName}" FontFamily="Courier New" Width="*" />
+                <DataGridCheckBoxColumn Header="Compressed" Binding="{Binding Compressed}" Width="40" />
+                <DataGridTextColumn Header="Size" Binding="{Binding DecompressedSize}" Width="40" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <ProgressBar Name ="prgSearchProgress" Height="19" Margin="275,41,10.307,0" VerticalAlignment="Top"/>
+        <Button Name="btnSearch" Content="Search" Margin="0,13,90.624,0" VerticalAlignment="Top" Click="btnSearch_Click" HorizontalAlignment="Right" Width="75"/>
+        <Button Name="btnCancel" Content="Cancel" Margin="0,12,10.624,0" VerticalAlignment="Top" Click="btnCancel_Click" HorizontalAlignment="Right" Width="75"/>
+        <TextBox Name="txtSearchValue" HorizontalAlignment="Left" Height="23" Margin="129,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Property Value" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top" Width="114" Height="26"/>
+        <CheckBox Name="chkViewInNewWindow" Content="View in &#xD;&#xA;New Window" Margin="275,8,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="93"/>
+        <Label Content="Property ID" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="114"/>
+        <TextBox Name="txtPropertyID" HorizontalAlignment="Left" Height="23" Margin="129,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Property Type&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Height="25"/>
+        <ComboBox Name="cmbPropertyType" HorizontalAlignment="Left" Margin="129,36,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0">
+            <ComboBoxItem Content="Key (IID)"/>
+            <ComboBoxItem Content="Number"/>
+            <ComboBoxItem Content="Bool"/>
+        </ComboBox>
+        <Label Content="Property Type is ignored if Property Value is empty" Margin="275,62,10.168,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

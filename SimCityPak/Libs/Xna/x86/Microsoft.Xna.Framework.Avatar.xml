@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <members>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarAnimation">
+      <summary />
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.#ctor(Microsoft.Xna.Framework.GamerServices.AvatarAnimationPreset)">
+      <summary>Creates a new instance of AvatarAnimation, and initializes it with the specified animation.</summary>
+      <param name="animationPreset">The specified standard animation.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.BoneTransforms">
+      <summary />
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.CurrentPosition">
+      <summary>Gets or sets the current time position in the animation.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Dispose">
+      <summary>Immediately releases the unmanaged resources used by this object.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Dispose(System.Boolean)">
+      <summary>Immediately releases the unmanaged resources used by this object.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Expression">
+      <summary>Gets the expression of the related animation at the current time position.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Finalize">
+      <summary>Allows the avatar animation to attempt to free resources, and it performs other cleanup operations before garbage collection reclaims the animation.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.IsDisposed">
+      <summary>Gets the disposed state of the avatar animation.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Length">
+      <summary>Gets the length of the current animation.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarAnimation.Update(System.TimeSpan,System.Boolean)">
+      <summary>Updates the current time position of the avatar animation.</summary>
+      <param name="elapsedAnimationTime">Elapsed time since the last animation frame. This value can be either a positive or negative time span. If the value is negative, animation playback is reversed.</param>
+      <param name="loop">true if the animation playback is to be looped; otherwise, false.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarAnimationPreset">
+      <summary>Defines standard animations for avatars.</summary>
+      <param name="Celebrate">Gender-neutral, celebrating.</param>
+      <param name="Clap">Gender-neutral, applauding.</param>
+      <param name="FemaleAngry">Female, angry.</param>
+      <param name="FemaleConfused">Female, confused.</param>
+      <param name="FemaleCry">Female, cry.</param>
+      <param name="FemaleIdleCheckNails">Female, checking nails.</param>
+      <param name="FemaleIdleFixShoe">Female, fixing shoe.</param>
+      <param name="FemaleIdleLookAround">Female, looking around.</param>
+      <param name="FemaleIdleShiftWeight">Female, shifting weight from one foot to another</param>
+      <param name="FemaleLaugh">Female, laughing.</param>
+      <param name="FemaleShocked">Female, shocked or surprised.</param>
+      <param name="FemaleYawn">Female, yawning.</param>
+      <param name="MaleAngry">Male, angry.</param>
+      <param name="MaleConfused">Male, confused.</param>
+      <param name="MaleCry">Male, crying.</param>
+      <param name="MaleIdleCheckHand">Male, checking hand.</param>
+      <param name="MaleIdleLookAround">Male, looking around.</param>
+      <param name="MaleIdleShiftWeight">Male, shifting weight from one foot to another.</param>
+      <param name="MaleIdleStretch">Male, stretching.</param>
+      <param name="MaleLaugh">Male, laughing.</param>
+      <param name="MaleSurprised">Male, surprised.</param>
+      <param name="MaleYawn">Male, yawning.</param>
+      <param name="Stand0">Gender-neutral, standing, variation 0.</param>
+      <param name="Stand1">Gender-neutral, standing, variation 1.</param>
+      <param name="Stand2">Gender-neutral, standing, variation 2.</param>
+      <param name="Stand3">Gender-neutral, standing, variation 3.</param>
+      <param name="Stand4">Gender-neutral, standing, variation 4.</param>
+      <param name="Stand5">Gender-neutral, standing, variation 5.</param>
+      <param name="Stand6">Gender-neutral, standing, variation 6.</param>
+      <param name="Stand7">Gender-neutral, standing, variation 7.</param>
+      <param name="Wave">Gender-neutral, waving.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarBodyType">
+      <summary>Defines the body type of the avatar.</summary>
+      <param name="Female">Female avatar.</param>
+      <param name="Male">Male avatar.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarBone">
+      <summary />
+      <param name="AnkleLeft">Left ankle.</param>
+      <param name="AnkleRight">Right ankle.</param>
+      <param name="BackLower">Lower back.</param>
+      <param name="BackUpper">Upper back.</param>
+      <param name="CollarLeft">Left collar.</param>
+      <param name="CollarRight">Right collar</param>
+      <param name="ElbowLeft">Left elbow</param>
+      <param name="ElbowRight">Right elbow</param>
+      <param name="FingerIndex2Left">Left index finger, 2nd joint.</param>
+      <param name="FingerIndex2Right">Right index finger, 2nd joint.</param>
+      <param name="FingerIndex3Left">Left index finger, 3rd joint.</param>
+      <param name="FingerIndex3Right">Right index finger, 3rd joint.</param>
+      <param name="FingerIndexLeft">Left index finger, 1st joint.</param>
+      <param name="FingerIndexRight">Right index finger, 1st joint.</param>
+      <param name="FingerMiddle2Left">Left middle finger, 2nd joint.</param>
+      <param name="FingerMiddle2Right">Right middle finger, 2nd joint.</param>
+      <param name="FingerMiddle3Left">Left middle finger, 3rd joint.</param>
+      <param name="FingerMiddle3Right">Right middle finger, 3rd joint.</param>
+      <param name="FingerMiddleLeft">Left middle finger, 1st joint.</param>
+      <param name="FingerMiddleRight">Right middle finger, 1st joint.</param>
+      <param name="FingerRing2Left">Left ring finger, 2nd joint.</param>
+      <param name="FingerRing2Right">Right ring finger, 2nd joint.</param>
+      <param name="FingerRing3Left">Left ring finger, 3rd joint.</param>
+      <param name="FingerRing3Right">Right ring finger, 3rd joint.</param>
+      <param name="FingerRingLeft">Left ring finger, 1st joint.</param>
+      <param name="FingerRingRight">Right ring finger, 1st joint.</param>
+      <param name="FingerSmall2Left">Left pinky finger, 2nd joint.</param>
+      <param name="FingerSmall2Right">Right pinky finger, 2nd joint.</param>
+      <param name="FingerSmall3Left">Left pinky finger, 3rd joint.</param>
+      <param name="FingerSmall3Right">Right pinky finger, 3rd joint.</param>
+      <param name="FingerSmallLeft">Left pinky finger, 1st joint.</param>
+      <param name="FingerSmallRight">Right pinky finger, 2nd joint.</param>
+      <param name="FingerThumb2Left">Left thumb, 2nd joint.</param>
+      <param name="FingerThumb2Right">Right thumb, 2nd joint.</param>
+      <param name="FingerThumb3Left">Left thumb, 3rd joint.</param>
+      <param name="FingerThumb3Right">Right thumb, 3rd joint.</param>
+      <param name="FingerThumbLeft">Left thumb, 1st joint.</param>
+      <param name="FingerThumbRight">Right thumb, 1st joint.</param>
+      <param name="Head">Head</param>
+      <param name="HipLeft">Left hip.</param>
+      <param name="HipRight">Right hip.</param>
+      <param name="KneeLeft">Left knee.</param>
+      <param name="Neck">Neck.</param>
+      <param name="PropLeft">A separate object held in the left hand.</param>
+      <param name="PropRight">A separate object held in the left hand.</param>
+      <param name="KneeRight">Right knee.</param>
+      <param name="Root">Root bone of the avatar skeleton.</param>
+      <param name="ShoulderLeft">Left shoulder.</param>
+      <param name="ShoulderRight">Right shoulder.</param>
+      <param name="SpecialLeft">A special bone located near the left hand of the avatar model.</param>
+      <param name="SpecialRight">A special bone located near the right hand of the avatar model.</param>
+      <param name="ToeLeft">Left toe.</param>
+      <param name="ToeRight">Right toe.</param>
+      <param name="WristLeft">Left wrist.</param>
+      <param name="WristRight">Right wrist.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarDescription">
+      <summary>Provides access to the methods and properties of the description data for an avatar.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarDescription.#ctor(System.Byte[])">
+      <summary>Creates a new instance of AvatarDescription using an existing data buffer.</summary>
+      <param name="data">Existing buffer used to store the information of the newly-created avatar. Use the buffer specified by the Description property of a valid AvatarDescription object. Common scenarios include the recreation of random avatars that were created earlier or when avatar decription data is sent over a network to all signed-in gamers. Once that data is received, local avatar descriptions and renderers are created for each remote gamer avatar. Results are undefined if buffers from other sources are used.</param>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarDescription.BeginGetFromGamer(Microsoft.Xna.Framework.GamerServices.Gamer,System.AsyncCallback,System.Object)">
+      <summary>Begins the process of getting a AvatarDescription object for a specified gamertag.</summary>
+      <param name="gamer">Gamer to request the AvatarDescription for.</param>
+      <param name="callback">The method to be called once the asynchronous operation has finished.</param>
+      <param name="state">State of the asynchronous operation.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarDescription.BodyType">
+      <summary>Gets the body type of the avatar based on the description data.</summary>
+    </member>
+    <member name="E:Microsoft.Xna.Framework.GamerServices.AvatarDescription.Changed">
+      <summary>Occurs when a gamer's avatar changes.</summary>
+      <param name="" />
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarDescription.CreateRandom">
+      <summary>Creates an avatar of random gender, features, and clothing.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarDescription.CreateRandom(Microsoft.Xna.Framework.GamerServices.AvatarBodyType)">
+      <summary>Creates an avatar of the specified body type with random features and clothing.</summary>
+      <param name="bodyType">Body type of the randomly-created avatar.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarDescription.Description">
+      <summary>Internal description buffer of the avatar, stored as a byte buffer.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarDescription.EndGetFromGamer(System.IAsyncResult)">
+      <summary>Ends the process of getting an AvatarDescription object for a specified gamertag.</summary>
+      <param name="result">An IAsyncResult used to track the progress of the operation.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarDescription.Height">
+      <summary>Height of the avatar, from the feet to the top of the head.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarDescription.IsValid">
+      <summary>Determines whether the internal data buffer is valid.</summary>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarExpression">
+      <summary>Contains the various components of the avatar's face, such as the left and right eyebrows.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarExpression.LeftEye">
+      <summary>Gets or sets the current texture for the avatar's left eye.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarExpression.LeftEyebrow">
+      <summary>Gets or sets the current texture for the avatar's left eye.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarExpression.Mouth">
+      <summary>Gets or sets the current texture for the avatar's mouth.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarExpression.RightEye">
+      <summary>Gets or sets the current texture for the avatar's right eye.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarExpression.RightEyebrow">
+      <summary>Gets or sets the current texture for the avatar's right eyebrow.</summary>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarEye">
+      <summary>Defines the standard animation textures for an avatar's eyes.</summary>
+      <param name="Angry">Angry eye position.</param>
+      <param name="Blink">Blinking eye position.</param>
+      <param name="Confused">Confused eye position.</param>
+      <param name="Happy">Happy eye position.</param>
+      <param name="Laughing">Laughing eye position.</param>
+      <param name="LookDown">Looking down eye position.</param>
+      <param name="LookLeft">Looking left position.</param>
+      <param name="LookRight">Looking right eye position.</param>
+      <param name="LookUp">Looking up eye position.</param>
+      <param name="Neutral">Neutral eye position.</param>
+      <param name="Sad">Sad eye position.</param>
+      <param name="Shocked">Shocked eye position.</param>
+      <param name="Sleeping">Sleeping eye position.</param>
+      <param name="Yawning">Yawning eye position.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarEyebrow">
+      <summary>Defines the standard animation textures for an avatar's eyebrows.</summary>
+      <param name="Angry">Angry eyebrow position.</param>
+      <param name="Confused">Confused eyebrow position.</param>
+      <param name="Neutral">Neutral eyebrow position.</param>
+      <param name="Raised">Raised eyebrow position.</param>
+      <param name="Sad">Sad eyebrow position.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarMouth">
+      <summary>Defines the standard animation textures for an avatar's mouth.</summary>
+      <param name="Angry">Angry mouth position.</param>
+      <param name="Confused">Confused mouth position.</param>
+      <param name="Happy">Happy mouth position.</param>
+      <param name="Laughing">Laughing mouth position.</param>
+      <param name="Neutral">Neutral mouth position.</param>
+      <param name="PhoneticAi">Phonetic "ai" mouth position (for lip sync).</param>
+      <param name="PhoneticDth">Phonetic "dth" mouth position (for lip sync).</param>
+      <param name="PhoneticEe">Phonetic "ee" mouth position (for lip sync).</param>
+      <param name="PhoneticFv">Phonetic "fv" mouth position (for lip sync).</param>
+      <param name="PhoneticL">Phonetic "l" mouth position (for lip sync).</param>
+      <param name="PhoneticO">Phonetic "o" mouth position (for lip sync).</param>
+      <param name="PhoneticW">Phonetic "w" mouth position (for lip sync).</param>
+      <param name="Sad">Sad mouth position.</param>
+      <param name="Shocked">Shocked mouth position.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarRenderer">
+      <summary>Provides properties and methods for rendering a standard avatar.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.#ctor(Microsoft.Xna.Framework.GamerServices.AvatarDescription)">
+      <summary>Creates a new instance of AvatarRenderer with the specified description.</summary>
+      <param name="avatarDescription">Description of the avatar to be rendered.</param>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.#ctor(Microsoft.Xna.Framework.GamerServices.AvatarDescription,System.Boolean)">
+      <summary />
+      <param name="avatarDescription">Description of the avatar to be rendered.</param>
+      <param name="useLoadingEffect">true if the standard effect is to be used during loading; otherwise, false.</param>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.AmbientLightColor">
+      <summary>Gets or sets the color of the ambient light used by the avatar renderer.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.BindPose">
+      <summary />
+    </member>
+    <member name="F:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.BoneCount">
+      <summary>Number of bones in the avatar model.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Dispose">
+      <summary>Immediately releases the unmanaged resources used by this object.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Dispose(System.Boolean)">
+      <summary>Immediately releases the unmanaged resources used by this object.</summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Draw(Microsoft.Xna.Framework.GamerServices.IAvatarAnimation)">
+      <summary />
+      <param name="animation">The animation to draw.</param>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Draw(System.Collections.Generic.IList{Microsoft.Xna.Framework.Matrix},Microsoft.Xna.Framework.GamerServices.AvatarExpression)">
+      <summary>Draws the avatar to the current render target.</summary>
+      <param name="bones">Collection of current bone transforms for the avatar. The transforms are in local bone space relative to their parent.</param>
+      <param name="expression">Current expression textures for the avatar.</param>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Finalize">
+      <summary>Allows the avatar renderer to attempt to free resources and perform other cleanup operations before garbage collection reclaims the renderer.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.IsDisposed">
+      <summary>Gets the disposed state of the avatar renderer.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.LightColor">
+      <summary>Gets or sets the color of the directional light used by the avatar renderer.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.LightDirection">
+      <summary>Gets or sets the color of the directional light used by the avatar renderer.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.ParentBones">
+      <summary>Collection of the parent indices for each bone in the related BindPose collection.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.Projection">
+      <summary>Gets or sets the projection matrix for the avatar.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.State">
+      <summary>Gets the state of the avatar.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.View">
+      <summary>Gets or sets the view matrix for the avatar.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.AvatarRenderer.World">
+      <summary>Gets or sets the world matrix for the avatar.</summary>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.AvatarRendererState">
+      <summary>Indicates avatar state.</summary>
+      <param name="Loading">The avatar is still loading required assets.</param>
+      <param name="Ready">Loading is complete.</param>
+      <param name="Unavailable">The avatar is unavailable.</param>
+    </member>
+    <member name="T:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation">
+      <summary>Provides methods and properties for animating an avatar using custom animations. Allows for easier integration between custom animations and built-in animations.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation.BoneTransforms">
+      <summary>Gets the current position of the bones at the time specified by CurrentPosition.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation.CurrentPosition">
+      <summary>Gets or sets the current time position in the animation.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation.Expression">
+      <summary>Gets the expression of the related animation at the current time position.</summary>
+    </member>
+    <member name="P:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation.Length">
+      <summary>Gets the length of the current animation.</summary>
+    </member>
+    <member name="M:Microsoft.Xna.Framework.GamerServices.IAvatarAnimation.Update(System.TimeSpan,System.Boolean)">
+      <summary>Updates the current time position of the avatar animation.</summary>
+      <param name="elapsedAnimationTime">Elapsed time since the last animation frame. This value can be a positive or a negative time span. If the value is negative, animation playback is reversed.</param>
+      <param name="loop">true if animation playback is to be looped; otherwise, false.</param>
+    </member>
+  </members>
+</doc>

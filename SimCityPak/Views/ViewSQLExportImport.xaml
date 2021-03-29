@@ -1,0 +1,19 @@
+﻿<Window x:Class="SimCityPak.Views.ViewSQLExportImport"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="168" d:DesignWidth="417"
+	Title="SQL Export/Import" SizeToContent="WidthAndHeight" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+
+    <Grid Width="395" Height="124">
+        <Button Content="Export" Height="23" HorizontalAlignment="Left" Margin="280,75,0,0" Name="btnExport" VerticalAlignment="Top" Width="96" IsEnabled="False" Click="btnExport_Click" />
+        <TextBox Text="Exports or imports SQL files." HorizontalAlignment="Left" Margin="14,12,0,0" Name="txtDescription" VerticalAlignment="Top" Width="278" ClipToBounds="False" Height="26" TextWrapping="Wrap" BorderThickness="0" AllowDrop="False" IsTabStop="False" IsUndoEnabled="False" IsReadOnly="True" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="82,42,0,0" Name="cmbDatabases" VerticalAlignment="Top" Width="192" SelectionChanged="cmbDatabases_SelectionChanged" />
+        <Label Content="Database" Height="28" HorizontalAlignment="Left" Margin="17,44,0,0" Name="label2" VerticalAlignment="Top" />
+        <Button Content="Import" Height="23" HorizontalAlignment="Right" IsEnabled="False" Margin="0,42,19,0" Name="btnImport" VerticalAlignment="Top" Width="96" Click="btnImport_Click" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="82,76,0,0" Name="cmbTables" VerticalAlignment="Top" Width="192" IsEnabled="False" SelectionChanged="cmbTables_SelectionChanged" />
+        <Label Content="Tables" Height="28" HorizontalAlignment="Left" Margin="33,74,0,0" Name="label1" VerticalAlignment="Top" />
+    </Grid>
+</Window>

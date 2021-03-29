@@ -1,0 +1,71 @@
+﻿<UserControl x:Class="SimCityPak.ViewVertexArray"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:sc="clr-namespace:SimCityPak.Views.RW4SectionViews.VertexValueViews"
+             mc:Ignorable="d" 
+             d:DesignHeight="316" d:DesignWidth="380" DataContextChanged="UserControl_DataContextChanged">
+    <UserControl.Resources>
+        <ContextMenu x:Key="d3dContextMenu">
+            <MenuItem Header="Edit" Click="MenuItem_Click_1" />
+        </ContextMenu>
+    </UserControl.Resources>
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFA3A3A3" IsReadOnly="true" Margin="10,10,12,0" Name="dataGridVertices" SelectionMode="Single" VerticalGridLinesBrush="#FFA3A3A3" Height="109" VerticalAlignment="Top">
+            <DataGrid.CellStyle>
+                <Style TargetType="{x:Type DataGridCell}">
+                    <Setter Property="ContextMenu" Value="{StaticResource d3dContextMenu}" />
+                </Style>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <DataGrid AutoGenerateColumns="True" HorizontalGridLinesBrush="#FFA3A3A3" IsReadOnly="true" Margin="10,125,12,41" Name="dataGridElements" SelectionMode="Single" VerticalGridLinesBrush="#FFA3A3A3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ElementId}" Header="Element" />
+                <DataGridTemplateColumn Header="Color 1">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sc:ViewColorElement SelectedIndex="{Binding Color1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Color 2">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sc:ViewColorElement SelectedIndex="{Binding Color2, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Top Layer Texture">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding TopLayerBitmap}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Color 3">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sc:ViewColorElement SelectedIndex="{Binding Color3, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Color 4">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <sc:ViewColorElement SelectedIndex="{Binding Color4, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Base Layer Texture">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="{Binding BaseLayerBitmap}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Save" Margin="0,0,12,12" Name="btnSave" HorizontalAlignment="Right" Width="75" Height="23" VerticalAlignment="Bottom" Click="btnSave_Click" />
+    </Grid>
+</UserControl>

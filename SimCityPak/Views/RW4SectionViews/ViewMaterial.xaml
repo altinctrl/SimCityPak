@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="SimCityPak.ViewMaterial"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalGridLinesBrush="#FFA3A3A3" Margin="10,10,12,0" Name="dataGridVertices" SelectionMode="Single" VerticalGridLinesBrush="#FFA3A3A3" CellEditEnding="dataGridVertices_CellEditEnding" Height="157" VerticalAlignment="Top">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Unknown 1" Binding="{Binding Unknown1, StringFormat=X}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Unknown 2" Binding="{Binding Unknown2, StringFormat=X}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Texture ID" Binding="{Binding TextureInstanceIdString}" />
+                <DataGridTextColumn Header="Unknown 3" Binding="{Binding Unknown3, StringFormat=X}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Texture Type" Binding="{Binding Unknown4, StringFormat=X}" IsReadOnly="True" />
+                <DataGridTextColumn Header="Unknown 5" Binding="{Binding Unknown5, StringFormat=X}" IsReadOnly="True" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <WrapPanel Margin="12,173,12,41" Orientation="Horizontal" Name="panelTextures" />
+        <Button Content="Export 3ds Max material files" Height="23" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btnExport3dsMax" VerticalAlignment="Bottom" Width="189" Click="btnExport3dsMax_Click" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Right" Margin="0,0,207,12" Name="btnSave" VerticalAlignment="Bottom" Width="75" Click="btnSave_Click" />
+    </Grid>
+</UserControl>

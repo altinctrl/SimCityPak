@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="SimCityPak.Views.AdvancedEditors.LotEditor.ViewUnitLight"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:simCityPak="clr-namespace:SimCityPak"
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="830" >
+
+    <Grid >
+        <Grid.Resources>
+            <simCityPak:ColorToBrushConverter x:Key="BrushConverter" />
+        </Grid.Resources>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="122,6,0,0" Name="txtLightName" Text="{Binding LightDebugNameProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="6,9,0,0"  Text="Debug Name:" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" SelectedValue="{Binding LightTypeProperty, UpdateSourceTrigger=PropertyChanged}"  DisplayMemberPath="Value"  SelectedValuePath="Key"  Margin="122,35,0,0" Name="cbLightType" VerticalAlignment="Top" Width="120" SelectionChanged="cbLightType_SelectionChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="8,40,0,0" Text="Light Type:" VerticalAlignment="Top" SnapsToDevicePixels="True" />
+        <Border Height="20" HorizontalAlignment="Left" BorderThickness="1" Margin="122,64,0,0" Background="{Binding LightColor, Converter={simCityPak:ColorPropertyConverter}}" BorderBrush="Black" Name="rectangle1" VerticalAlignment="Top" Width="98" SnapsToDevicePixels="True">
+        </Border>
+
+        <TextBlock HorizontalAlignment="Left" Margin="8,66,0,0" Text="Color:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="122,90,0,0" Name="tbInnerRadius" Text="{Binding LightInnerRadiusProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="122,119,0,0" Name="tbOuterRadius" Text="{Binding LightOuterRadiusProperty, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" TextChanged="tbLength_TextChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="8,93,0,0" SnapsToDevicePixels="True" Text="Inner Radius:" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="8,122,0,0" SnapsToDevicePixels="True" Text="Outer Radius:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="401,6,0,0" Name="tbDiffuseLevels" Text="{Binding LightDiffuseLevelProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="285,9,0,0" Text="Diffuse Level:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="401,35,0,0" Name="tbSpecLevels" Text="{Binding LightSpecLevelsProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="285,38,0,0" Text="Specular Level:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="401,64,0,0" Name="tbLength" Text="{Binding LightLengthProperty, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120" TextChanged="tbLength_TextChanged" />
+        <TextBlock HorizontalAlignment="Left" Margin="285,67,0,0" Text="Length:" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="285,96,0,0" Text="Cull Distance:" VerticalAlignment="Top" />
+        <ComboBox DisplayMemberPath="Value" Height="23" HorizontalAlignment="Left" Margin="401,93,0,0" Name="cbCullDistance" SelectedValue="{Binding LightCullDistanceProperty}" SelectedValuePath="Key" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="401,122,0,0" Name="tbFallOffStart" Text="{Binding LightFalloffStartProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="284,122,0,0" Text="Falloff Start:" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="570,9,0,0" Text="Volumetric:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="686,35,0,0" Name="textBox1" Text="{Binding LightVolStrengthProperty}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="570,38,0,0" Text="Volume Strength:" VerticalAlignment="Top" />
+        <CheckBox Content="" Height="16" HorizontalAlignment="Left" Margin="686,9,0,0" IsChecked="{Binding IsVolumetricProperty}" Name="cbIsVolumetric" VerticalAlignment="Top" />
+        <Button HorizontalAlignment="Left" Margin="226,66,0,0" Height="16" VerticalAlignment="Top" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Cursor="Hand" Height="16" Source="/SimCityPak;component/Images/edit.png" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>

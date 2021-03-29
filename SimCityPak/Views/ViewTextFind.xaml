@@ -1,0 +1,11 @@
+﻿<Window x:Class="SimCityPak.Views.ViewTextFind"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Find text" Height="109" Width="389" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" KeyDown="Window_KeyDown" WindowStyle="SingleBorderWindow" Closing="Window_Closing">
+    <Grid Height="70">
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0"  Text="Find what:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="75,9,0,0" Name="txtSearch" VerticalAlignment="Top" Width="280" TabIndex="1"></TextBox>
+        <CheckBox Content="Match case" Height="16" HorizontalAlignment="Left" Margin="12,42,0,0" Name="chkCaseSensitive" VerticalAlignment="Top" TabIndex="2" />
+        <Button Content="Find (F3)" Height="23" HorizontalAlignment="Left" Margin="280,38,0,0" Name="btnFind" VerticalAlignment="Top" Width="75" Click="btnFind_Click" TabIndex="3" />
+    </Grid>
+</Window>

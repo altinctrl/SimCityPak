@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="SimCityPak.ViewMesh"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:helixToolKit="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <Grid.Resources>
+          
+            
+        </Grid.Resources>  
+
+        <helixToolKit:HelixViewport3D Name="viewPort"  ClipToBounds="True" ZoomExtentsWhenLoaded="True">
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <DirectionalLight Direction="{Binding ElementName=viewPort, Path=Camera.LookDirection}" >
+                    </DirectionalLight>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <GeometryModel3D x:Name="Model">
+                        <GeometryModel3D.Geometry>
+                            <MeshGeometry3D x:Name="meshMain"  >
+                            </MeshGeometry3D>
+                        </GeometryModel3D.Geometry>
+                        <GeometryModel3D.Material>
+                            <DiffuseMaterial x:Name="matDiffuseMain"    >
+                                <DiffuseMaterial.Brush>
+                                    <SolidColorBrush Color="White" />
+                                </DiffuseMaterial.Brush>
+                            </DiffuseMaterial>
+                        </GeometryModel3D.Material>
+                    </GeometryModel3D>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </helixToolKit:HelixViewport3D>
+        <Border VerticalAlignment="Top" Margin="10" BorderBrush="SlateGray" Background="#FFF0F0F0" BorderThickness="1" >
+            <Menu Margin="5">
+                <MenuItem Header="Import" >
+                    <MenuItem Header="Collada .DAE" Name="mnuImportCollada" Click="mnuImportCollada_Click" />
+                    <MenuItem Header="Wavefront .OBJ" Name="mnuImportOBJ" Click="mnuImportOBJ_Click" />
+                </MenuItem>
+                <MenuItem Header="Export" >
+                    <MenuItem Header="Wavefront .OBJ" Name="mnuExportOBJ" Click="mnuExportOBJ_Click" />
+                </MenuItem>
+                <Separator Width="3" IsEnabled="False" />
+                <MenuItem Header="Textures" >
+                </MenuItem>
+                <MenuItem Header="Mesh Tools" >
+                    <MenuItem Header="Recalculate Tangents" Name="mnuRecalculateTangent" Click="mnuRecalculateTangent_Click" />
+                </MenuItem>
+
+            </Menu>
+        </Border>
+    </Grid>
+</UserControl>

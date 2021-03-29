@@ -1,0 +1,14 @@
+﻿<Window x:Class="SimCityPak.Views.ViewAddProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Property" Height="239" Width="389" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,34,0,0" Name="cbPropertyName" DisplayMemberPath="DisplayName" VerticalAlignment="Top" Width="343" IsEditable="True" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0"  Text="Property:" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,85,0,0" Name="cbTypeName" DisplayMemberPath="Name" VerticalAlignment="Top" Width="343" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,63,0,0" Text="Type:" VerticalAlignment="Top" />
+        <CheckBox Content="Is Array" Height="16" HorizontalAlignment="Left" Margin="12,123,0,0" Name="chkIsArray" VerticalAlignment="Top" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="199,165,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" Click="btnCancel_Click" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="280,165,0,0" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+    </Grid>
+</Window>

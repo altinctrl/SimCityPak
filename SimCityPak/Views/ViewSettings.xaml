@@ -1,0 +1,23 @@
+﻿<Window x:Class="SimCityPak.Views.ViewSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SimCityPak Settings" Height="348" Width="698" ShowInTaskbar="False"  WindowStartupLocation="CenterScreen" ResizeMode="NoResize" MinHeight="175">
+    <Grid>
+        <Button Content="Browse..." Height="23" Margin="0,34,12.436,0" Name="btnLocaleBrowse" VerticalAlignment="Top" Click="btnLocaleBrowse_Click" HorizontalAlignment="Right" Width="75" />
+        <TextBox Height="23" Margin="12,34,93,0" Name="txtLocale" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0" Name="lblLocale" Text="Locale File:" VerticalAlignment="Top" />
+        <Button Name="btnDefaultFileBrowse" Content="Browse..." Margin="0,83,12.436,0" VerticalAlignment="Top" Height="23" Click="btnDefaultFileBrowse_Click" HorizontalAlignment="Right" Width="75"/>
+        <TextBox Name="txtDefaultFile" Height="23" Margin="12,83,93.436,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,62,0,0" x:Name="lblDefaultFile" Text="Default package file:" VerticalAlignment="Top" />
+        <Button Content="OK" Height="23" HorizontalAlignment="Right" Margin="0,0,12.436,9.802" Name="btnOK" VerticalAlignment="Bottom" Width="75" Click="btnOK_Click" />
+        <Button x:Name="btnRegistryFilesBrowse" Content="Browse..." Margin="0,183,12,0" VerticalAlignment="Top" Height="23" Click="btnRegistryFilesBrowse_Click" HorizontalAlignment="Right" Width="75"/>
+        <TextBox x:Name="txtRegistryFiles" Height="23" Margin="12,183,93,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,162,0,0" x:Name="lblRegistryFiles" Text="Folder Containing Registry Files (restart SimCityPak):" VerticalAlignment="Top" Width="278" />
+        <CheckBox x:Name="chkPROPImages" Content="Show images in PROP by default" HorizontalAlignment="Left" Margin="12,221,0,0" Height="15" VerticalAlignment="Top"/>
+        <CheckBox Content="Show internal names for properties" Height="15" HorizontalAlignment="Left" Margin="12,242,0,0" Name="chkPropertyInternalNames" VerticalAlignment="Top" />
+        <CheckBox Content="Show property ids" Height="15" HorizontalAlignment="Left" Margin="12,263,0,0" Name="chkPropertyIds" VerticalAlignment="Top" />
+        <Button Content="Browse..." Height="23" HorizontalAlignment="Right" Margin="0,133,12,0" Name="btnSimCityFolderBrowse" VerticalAlignment="Top" Width="75" Click="btnSimCityFolderBrowse_Click" />
+        <TextBox Height="23" Margin="12,133,93,0" Name="txtSimCityFolder" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,112,0,0" Name="lbSimCityFolder" Text="SimCity Game Root Folder" VerticalAlignment="Top" Width="278" />
+    </Grid>
+</Window>

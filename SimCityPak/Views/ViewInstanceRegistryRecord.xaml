@@ -1,0 +1,18 @@
+﻿<Window x:Class="SimCityPak.Views.ViewInstanceRegistryRecord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ViewInstanceRegistryRecord" Height="147" Width="585">
+    <Grid Height="110">
+        <TextBox Height="23" HorizontalAlignment="Left" IsReadOnly="True" Margin="10,32,0,0" Name="txtId" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="136,32,0,0" Name="txtDisplayName" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="262,32,0,0" Name="txtComment" VerticalAlignment="Top" Width="286" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" Name="textBlock1" Text="ID" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="136,10,0,0" Name="textBlock2" Text="Display Name" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="262,10,0,0" Name="textBlock3" Text="Comment" VerticalAlignment="Top" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="473,75,0,0" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="10,84,0,0" x:Name="txtTags" VerticalAlignment="Top" Width="286" Visibility="Hidden" />
+        <TextBlock HorizontalAlignment="Left" Margin="10,62,0,0" x:Name="textBlock4" Text="Tags (space seperated)" VerticalAlignment="Top" Visibility="Hidden" />
+        <TextBlock HorizontalAlignment="Left" Margin="307,62,0,0" x:Name="textBlock5" Text="Hidden" VerticalAlignment="Top" Visibility="Hidden" />
+        <CheckBox Name="chkHidden" HorizontalAlignment="Left" Margin="310,88,0,0" VerticalAlignment="Top" Visibility="Hidden" />
+    </Grid>
+</Window>

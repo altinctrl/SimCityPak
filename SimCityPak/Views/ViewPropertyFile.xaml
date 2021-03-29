@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="SimCityPak.ViewPropertyFile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:simcitypak="clr-namespace:SimCityPak"
+             xmlns:properties="clr-namespace:SimCityPak.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="253" d:DesignWidth="500" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <Border VerticalAlignment="Top" Margin="10" BorderBrush="SlateGray" Background="#FFF0F0F0" BorderThickness="1" >
+            <Menu Margin="5">
+                <MenuItem Header="Add Property..." Click="btnAddProperty_Click" />
+                <MenuItem Header="Edit" >
+                    <MenuItem Header="Flatten Inheritance" Click="MenuItem_Click_1" />
+                </MenuItem>
+                <Separator Width="3" IsEnabled="False" />
+                <MenuItem Header="View Children" Click="btnViewChildren_Click" />
+                <MenuItem Header="Advanced Editors" >
+                    <MenuItem Header="Lot Editor" Name="mnuLotEditor" Click="btnLightsEditor_Click" />
+                    <MenuItem Header="Export Copy..." Name="mnuCopy" Click="mnuCopy_Click" />
+                </MenuItem>
+                <MenuItem Header="Tools..." >
+                    <MenuItem Header="Debug" Name="mnuDebug" Click="btnDebug_Click" />
+                </MenuItem>
+            </Menu>
+        </Border>
+        <DockPanel Margin="10,46,10,61">
+            <Expander DockPanel.Dock="Bottom" Header="Images" IsExpanded="{Binding Source={x:Static properties:Settings.Default},
+                               Path=PropImagesExpanded}">
+                <StackPanel Name="pnlImages" Orientation="Horizontal" CanHorizontallyScroll="True"/>
+            </Expander>
+            <DataGrid DockPanel.Dock="Top" AutoGenerateColumns="False" Name="dataGrid1" VerticalAlignment="Stretch" SelectionMode="Extended" HorizontalGridLinesBrush="#FFA3A3A3" VerticalGridLinesBrush="#FFA3A3A3" Margin="0,0,-0.119,5.228" SelectionChanged="dataGrid1_SelectionChanged">
+                <DataGrid.Resources>
+                    <DataTemplate x:Key="viewBasicProperty">
+                        <simcitypak:ViewBasicProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                    <DataTemplate x:Key="viewStringProperty">
+                        <simcitypak:ViewStringProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                    <DataTemplate x:Key="viewFloatProperty">
+                        <simcitypak:ViewNumericProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                    <DataTemplate x:Key="viewBoolProperty">
+                        <simcitypak:ViewBooleanProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                    <DataTemplate x:Key="viewKeyProperty">
+                        <simcitypak:ViewKeyProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                    <DataTemplate x:Key="viewColorProperty">
+                        <simcitypak:ViewColorProperty DataContext="{Binding Value}" />
+                    </DataTemplate>
+                </DataGrid.Resources>
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Property" Width="250" IsReadOnly="True" >
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding DisplayName}" ToolTip="{Binding ToolTip}" >
+                                    <TextBlock.ContextMenu>
+                                        <ContextMenu>
+                                            <MenuItem Header="Edit Property Name..." DataContext="{Binding PropertyDetails}" Click="MenuItem_Click" />
+                                            <MenuItem Header="Delete Property..." Name="mnuDeleteProperty"  Click="mnuDeleteProperty_Click"    />
+                                            <Separator />
+                                            <MenuItem Header="Add Array Item..." Name="mnuAddArrayItem" IsEnabled="{Binding IsArray}" Click="mnuAddArrayItem_Click" />
+                                            <MenuItem Header="Insert Array Item..." Name="mnuInsertArrayItem" IsEnabled="{Binding IsArray}" Click="mnuInsertArrayItem_Click" />
+                                            <MenuItem Header="Remove Array Item..." Name="mnuRemoveArrayItem"  IsEnabled="{Binding IsArray}" Click="mnuRemoveArrayItem_Click"  />
+                                            <Separator />
+                                            <MenuItem Header="Copy Properties" Name="mnuCopyProperties" Click="mnuCopyProperties_Click" />
+                                            <MenuItem Header="Paste Properties" Name="mnuPasteProperties" Click="mnuPasteProperties_Click" />
+                                            </ContextMenu>
+                                    </TextBlock.ContextMenu>
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Value" Width="*" >
+                        <DataGridTemplateColumn.CellTemplateSelector>
+                            <simcitypak:PropertyViewSelector   />
+                        </DataGridTemplateColumn.CellTemplateSelector>
+                        <DataGridTemplateColumn.CellEditingTemplateSelector>
+                            <simcitypak:PropertyViewSelector   />
+                        </DataGridTemplateColumn.CellEditingTemplateSelector>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Height="161" Name="tbxError" DockPanel.Dock="Top" Foreground="Red" Visibility="Collapsed" TextWrapping="Wrap"><Run Text="" /></TextBlock>
+        </DockPanel>
+        <TextBlock x:Name="txtStatus" Height="16" VerticalAlignment="Bottom" ><Run Text="Test"/></TextBlock>
+    </Grid>
+</UserControl>

@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="SimCityPak.Views.AdvancedEditors.LotEditor.ViewUnitDecal"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+              d:DesignHeight="170" d:DesignWidth="830" >
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="12,9,0,0" Text="Category:" VerticalAlignment="Top" />
+        <ComboBox DisplayMemberPath="Value" Height="23"  HorizontalAlignment="Left" Margin="128,6,0,0" Name="cbDecalCategory" SelectedValue="{Binding Category}" SelectedValuePath="Key"   VerticalAlignment="Top" Width="120"  />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,35,0,0" Name="txtDepth" Text="{Binding Depth}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,38,0,0" Text="Depth:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,64,0,0" Name="txtCustom1" Text="{Binding CustomData1}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,67,0,0" Text="Custom Data 1:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,93,0,0" Name="txtCustom2" Text="{Binding CustomData2}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,96,0,0" Text="Custom Data 2:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="128,122,0,0" Name="txtCustom3" Text="{Binding CustomData3}" VerticalAlignment="Top" Width="120" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,125,0,0" Text="Custom Data 3:" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="286,9,0,0" Text="Render Group:" VerticalAlignment="Top" />
+        <ComboBox DisplayMemberPath="Value" IsEnabled="{Binding HasRenderGroup}" Height="23" HorizontalAlignment="Left" Margin="421,6,0,0" Name="cbRenderGroup" SelectedValue="{Binding RenderGroup}" SelectedValuePath="Key" VerticalAlignment="Top" Width="101" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="421,35,0,0" IsEnabled="{Binding HasMachineSpec}" Text="{Binding DecalMachineSpec}" VerticalAlignment="Top" Width="101" />
+        <TextBlock HorizontalAlignment="Left" Margin="286,38,0,0" Text="Min. Machine Spec:" VerticalAlignment="Top" />
+        <CheckBox Height="16" HorizontalAlignment="Left" Margin="402,12,0,0" Name="chxRenderGroup" IsChecked="{Binding HasRenderGroup}" VerticalAlignment="Top" />
+        <CheckBox Height="16" HorizontalAlignment="Left" Margin="402,38,0,0" Name="chxMachineSpec" IsChecked="{Binding HasMachineSpec}" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="421,64,0,0" Name="txtScale" Text="{Binding Scale}" VerticalAlignment="Top" Width="101" />
+        <TextBlock HorizontalAlignment="Left" Margin="286,64,0,0" Text="Scale:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="421,93,0,0" Name="txtID" Text="{Binding ID}" VerticalAlignment="Top" Width="101" />
+        <TextBlock HorizontalAlignment="Left" Margin="286,93,0,0" Text="ID:" VerticalAlignment="Top" />
+    </Grid>
+</UserControl>

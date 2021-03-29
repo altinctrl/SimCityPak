@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="SimCityPak.Views.AdvancedEditors.ViewDecalDictionary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             x:Name="ucDecalDictionary"
+             mc:Ignorable="d" 
+             d:DesignHeight="332" d:DesignWidth="500" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <ListView Name="listViewDecals" Margin="10,138,10,12" ItemsSource="{Binding Decals, ElementName=ucDecalDictionary}">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel Orientation="Horizontal" Width="{Binding (FrameworkElement.ActualWidth), RelativeSource={RelativeSource AncestorType=ScrollContentPresenter}}" />
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <StackPanel.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem  Header="Edit..." Name="mnuEditDecal" Click="mnuEditDecal_Click" />
+                                <MenuItem  Header="Delete..." Name="mnuDeleteDecal" Click="mnuDeleteDecal_Click" />
+                            </ContextMenu>
+                        </StackPanel.ContextMenu>
+                        <Image Source="{Binding ImageSource}" Stretch="None" />
+                        <TextBlock Text="{Binding IdProperty}" HorizontalAlignment="Center" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Border VerticalAlignment="Top" Margin="10" BorderBrush="SlateGray" Background="#FFF0F0F0" BorderThickness="1" >
+            <Menu Margin="5">
+                <MenuItem Header="Add Decal..." Name="mnuAddDecal" Click="mnuAddDecal_Click" />
+                <MenuItem Header="Generate Decal..." Name="mnuGenerateDecal" Click="mnuGenerateDecal_Click" />
+            </Menu>
+        </Border>
+        <Grid Height="94" HorizontalAlignment="Left" Margin="12,46,0,0" Name="gridDetails" VerticalAlignment="Top" Width="478">
+            <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0" Text="Material" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="84,0,0,0" Name="txtMaterialId" VerticalAlignment="Top" Text="{Binding MaterialIdProperty}" Width="106" />
+            <TextBlock HorizontalAlignment="Left" Margin="1,30,0,0" Text="Texture Size" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="84,29,0,0" Text="{Binding Path=TextureSizeX}" VerticalAlignment="Top" Width="50" Name="txtTextureSizeX" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="140,29,0,0" Text="{Binding Path=TextureSizeY}" VerticalAlignment="Top" Width="50" Name="txtTextureSizeY" />
+            <TextBlock HorizontalAlignment="Left" Margin="1,59,0,0" Text="Atlas Size" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="84,58,0,0" Text="{Binding Path=AtlasSizeX}" VerticalAlignment="Top" Width="50" Name="txtAtlasSizeX" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="140,58,0,0" Text="{Binding Path=AtlasSizeY}" VerticalAlignment="Top" Width="50" Name="txtAtlasSizeY" />
+        </Grid>
+    </Grid>
+</UserControl>

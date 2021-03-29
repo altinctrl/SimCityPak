@@ -1,0 +1,20 @@
+﻿<Window x:Class="SimCityPak.Views.ViewFNVNameHashScan"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="238" d:DesignWidth="526"
+	Title="FNV Dictionary Generator" SizeToContent="WidthAndHeight" Closing="Window_Closing" WindowStyle="SingleBorderWindow" ResizeMode="NoResize">
+
+    <Grid Width="499" Height="200">
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,62,0,0" Name="txtOutFile" VerticalAlignment="Top" Width="280" TextChanged="txtOutFile_TextChanged" />
+        <Button Content="Select File" Height="23" HorizontalAlignment="Right" Margin="0,61,10,0" Name="btnSelectOutFile" VerticalAlignment="Top" Width="77" Click="btnSelectOutFile_Click" />
+        <ProgressBar Height="22" HorizontalAlignment="Left" Margin="14,90,0,0" Name="prgSearchProgress" VerticalAlignment="Top" Width="473" />
+        <Button Content="Scan Open Packages" Height="23" HorizontalAlignment="Left" Margin="355,136,0,0" Name="btnScanPackages" VerticalAlignment="Top" Width="132" IsEnabled="True" Click="btnScanPackages_Click" />
+        <TextBox Text="Scans all open package files or any other type of external files for keywords. New keywords will be FNV hashed and saved to a CSV dictionary file." HorizontalAlignment="Left" Margin="14,12,0,0" Name="txtDescription" VerticalAlignment="Top" Width="418" ClipToBounds="False" Height="39" TextWrapping="Wrap" BorderThickness="0" AllowDrop="False" IsTabStop="False" IsUndoEnabled="False" IsReadOnly="True" />
+        <Label Content="Idle..." Height="28" HorizontalAlignment="Left" Margin="12,110,0,0" Name="lblStatus" VerticalAlignment="Top" />
+        <Button Content="Scan External Files" Height="23" HorizontalAlignment="Left" Margin="355,165,0,0" Name="btnScanFiles" VerticalAlignment="Top" Width="132" Click="btnScanFiles_Click" />
+        <Label Content="Save Dictionary to" Height="28" HorizontalAlignment="Left" Margin="14,59,0,0" Name="label1" VerticalAlignment="Top" />
+    </Grid>
+</Window>

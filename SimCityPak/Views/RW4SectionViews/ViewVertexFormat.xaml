@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="SimCityPak.ViewVertexFormat"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" HorizontalGridLinesBrush="#FFA3A3A3" IsReadOnly="true" Margin="10,10,12,12" Name="dataGridVertices" SelectionMode="Single" VerticalGridLinesBrush="#FFA3A3A3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Offset}" Header="Offset" />
+                <DataGridTextColumn Binding="{Binding Usage}" Header="Usage" />
+                <DataGridTextColumn Binding="{Binding DeclarationType}" Header="DeclarationType" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

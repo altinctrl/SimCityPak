@@ -1,0 +1,12 @@
+﻿<Window x:Class="SimCityModManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">
+    <Grid>
+        <Button Content="Install Mods..." Height="29" HorizontalAlignment="Left" Margin="155,98,0,0" Name="btnInstall" VerticalAlignment="Top" Width="169" Click="btnInstall_Click"/>
+        <TextBox Height="23" Name="txtGameFolder"  HorizontalAlignment="Left" Margin="37,41,0,0" VerticalAlignment="Top" Width="323" />
+        <TextBlock  Text="SimCity Game Folder:" Margin="37,19,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Button Content="Browse..." Height="23" HorizontalAlignment="Left" Margin="369,41,0,0" Name="btnBrowse" VerticalAlignment="Top" Width="75" />
+        <ProgressBar Height="9" HorizontalAlignment="Left" Margin="100,133,0,0" Name="progressBarInstalling" VerticalAlignment="Top" Width="292" />
+    </Grid>
+</Window>

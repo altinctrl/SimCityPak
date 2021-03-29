@@ -1,0 +1,59 @@
+﻿<Window x:Class="SimCityPak.Views.AdvancedEditors.DecalDictionary.ViewEditDecalDictionaryEntry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:simCityPak="clr-namespace:SimCityPak"
+        Title="EditDecalDictionaryEntry" Height="392" Width="508" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.Resources>
+            <simCityPak:ColorToBrushConverter x:Key="BrushConverter" />
+        </Grid.Resources>
+        <Image Height="150" Margin="12,12,12,0" Name="imgPreview" Stretch="None" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="92,168,0,0" Name="txId" Text="{Binding IdProperty}" VerticalAlignment="Top" Width="98" />
+        <Button Content="Cancel" HorizontalAlignment="Right" Margin="0,0,93,12" Name="btnCancel" Width="75" Height="23" VerticalAlignment="Bottom" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Right" Margin="0,0,12,12" Name="btnSave" VerticalAlignment="Bottom" Width="75" Click="btnSave_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,171,0,0" Text="ID" VerticalAlignment="Top" Name="txtID" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,239,0,0" Name="textBlock1" Text="Color 1" VerticalAlignment="Top" />
+        <Border Background="{Binding Color1, Converter={StaticResource BrushConverter}}" BorderBrush="Black" BorderThickness="1" Height="20" HorizontalAlignment="Left" Margin="92,237,0,0" Name="rectangle1" SnapsToDevicePixels="True" VerticalAlignment="Top" Width="98" />
+        <Button Height="16" HorizontalAlignment="Left" Margin="196,239,0,0" VerticalAlignment="Top" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Cursor="Hand" Height="16" Source="/SimCityPak;component/Images/edit.png" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border Background="{Binding Color2, Converter={StaticResource BrushConverter}}" BorderBrush="Black" BorderThickness="1" Height="20" HorizontalAlignment="Left" Margin="92,265,0,0" Name="rectangle2" SnapsToDevicePixels="True" VerticalAlignment="Top" Width="98" />
+        <Button Height="16" HorizontalAlignment="Left" Margin="196,267,0,0" VerticalAlignment="Top" Click="Button_Click_1">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Cursor="Hand" Height="16" Source="/SimCityPak;component/Images/edit.png" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border Background="{Binding Color3, Converter={StaticResource BrushConverter}}" BorderBrush="Black" BorderThickness="1" Height="20" HorizontalAlignment="Left" Margin="92,293,0,0" Name="rectangle3" SnapsToDevicePixels="True" VerticalAlignment="Top" Width="98" />
+        <Button Height="16" HorizontalAlignment="Left" Margin="196,295,0,0" VerticalAlignment="Top" Click="Button_Click_2">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Cursor="Hand" Height="16" Source="/SimCityPak;component/Images/edit.png" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Border Background="{Binding Color4, Converter={StaticResource BrushConverter}}" BorderBrush="Black" BorderThickness="1" Height="20" HorizontalAlignment="Left" Margin="92,321,0,0" Name="rectangle4" SnapsToDevicePixels="True" VerticalAlignment="Top" Width="98" />
+        <Button Height="16" HorizontalAlignment="Left" Margin="196,323,0,0" VerticalAlignment="Top" Click="Button_Click_3">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Cursor="Hand" Height="16" Source="/SimCityPak;component/Images/edit.png" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="12,325,0,0" Name="textBlock2" Text="Color 4" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,267,0,0" Name="textBlock4" Text="Color 2" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,295,0,0" Name="textBlock5" Text="Color 3" VerticalAlignment="Top" /> 
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="231,212,0,0" Name="textBlock3" Text="Glow" VerticalAlignment="Top" Height="16" Width="44" />
+        <TextBox Height="22" HorizontalAlignment="Left" Text="{Binding Glow1}" Margin="231,235,0,0" Name="txtGlow1" VerticalAlignment="Top" Width="44" />
+        <TextBox Height="22" HorizontalAlignment="Left" Text="{Binding Glow2}" Margin="231,263,0,0" Name="txtGlow2" VerticalAlignment="Top" Width="44" />
+        <TextBox Height="22" HorizontalAlignment="Left" Text="{Binding Glow3}" Margin="231,291,0,0" Name="txtGlow3" VerticalAlignment="Top" Width="44" />
+        <TextBox Height="22" HorizontalAlignment="Left" Text="{Binding Glow4}" Margin="231,319,0,0" Name="txtGlow4" VerticalAlignment="Top" Width="44" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="92,197,0,0" Name="textBox1" Text="{Binding DecalIdProperty}" VerticalAlignment="Top" Width="98" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,200,0,0" Name="textBlock6" Text="Raster File ID" VerticalAlignment="Top" />
+    </Grid>
+</Window>

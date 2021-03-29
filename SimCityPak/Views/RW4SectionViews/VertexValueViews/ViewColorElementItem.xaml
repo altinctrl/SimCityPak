@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SimCityPak.Views.RW4SectionViews.VertexValueViews.ViewColorElementItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="33" Width="84" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        
+    <TextBlock Name="ToolTipValue" Margin="39,0,0,0" />
+    <Grid Margin="0,0,51,0">
+    
+           
+  
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"  />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Column="0" Grid.Row="0" Fill="#FFC30000" Name="C1" />
+        <Rectangle Grid.Column="1" Grid.Row="0" Fill="#FFC30000" Name="C2" />
+        <Rectangle Grid.Column="0" Grid.Row="1" Fill="#FFC30000" Name="C3" />
+        <Rectangle Grid.Column="1" Grid.Row="1" Fill="#FFC30000" Name="C4" />
+    </Grid>
+    </Grid>
+</UserControl>

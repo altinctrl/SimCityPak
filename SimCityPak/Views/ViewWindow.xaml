@@ -1,0 +1,42 @@
+﻿<Window x:Class="SimCityPak.ViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:simCityPak="clr-namespace:SimCityPak"
+        Title="ViewWindow" Height="300" Width="300" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <ContentControl Name="contentHolder">
+            <ContentControl.ContentTemplateSelector>
+                <simCityPak:ViewSelector />
+            </ContentControl.ContentTemplateSelector>
+            <ContentControl.Resources>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewPng">
+                    <simCityPak:ViewPng />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewTga">
+                    <simCityPak:ViewTga />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewRawImage">
+                    <simCityPak:ViewRawImage />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewRW4">
+                    <simCityPak:ViewRW4 />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewData">
+                    <simCityPak:ViewHex />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewText">
+                    <simCityPak:ViewText />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewJavascript">
+                    <simCityPak:ViewJavaScript />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewPropertyFile">
+                    <simCityPak:ViewPropertyFile />
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type simCityPak:DatabaseIndexData}" x:Key="viewRaster">
+                    <simCityPak:ViewRaster />
+                </DataTemplate>
+            </ContentControl.Resources>
+        </ContentControl>
+    </Grid>
+</Window>

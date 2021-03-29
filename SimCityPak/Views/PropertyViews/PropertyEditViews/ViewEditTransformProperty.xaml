@@ -1,0 +1,26 @@
+﻿<Window x:Class="SimCityPak.Views.PropertyViews.PropertyEditViews.ViewEditTransformProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Transform Property" Height="303" Width="393" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,85,0,0" Name="txtM11" VerticalAlignment="Top" Width="51" />
+        <TextBlock  Margin="12,63,0,0" Text="Matrix:" VerticalAlignment="Top" HorizontalAlignment="Left" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,85,0,0" Name="txtM12" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,85,0,0" Name="txtM13" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,114,0,0" Name="txtM21" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,114,0,0" Name="txtM22" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,114,0,0" Name="txtM23" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,143,0,0" Name="txtM31" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,143,0,0" Name="txtM32" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,143,0,0" Name="txtM33" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,172,0,0" Name="txtM41" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="69,172,0,0" Name="txtM42" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="126,172,0,0" Name="txtM43" VerticalAlignment="Top" Width="51" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Left" Margin="195,222,0,0" Name="btnCancel" VerticalAlignment="Top" Width="75" Click="btnCancel_Click" />
+        <Button Content="Save" Height="23" HorizontalAlignment="Left" Margin="276,222,0,0" Name="btnSave" VerticalAlignment="Top" Width="75" Click="btnSave_Click" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,201,0,0" Text="Unknown:" VerticalAlignment="Top" Width="51" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,223,0,0" Name="txtUnkown" VerticalAlignment="Top" Width="108" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,34,0,0" Name="txtFlags" VerticalAlignment="Top" Width="165" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0" Text="Flags:" VerticalAlignment="Top" Width="51" />
+    </Grid>
+</Window>

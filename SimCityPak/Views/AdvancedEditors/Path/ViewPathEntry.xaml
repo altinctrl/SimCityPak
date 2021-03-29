@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="SimCityPak.Views.AdvancedEditors.ViewPathEntry"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="193" Width="720" HorizontalAlignment="Stretch">
+    <Border Margin="3" BorderBrush="DarkGray" BorderThickness="1" Padding="5">
+        <Grid>
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="83,0,0,0" Text="{Binding ModelKey}" VerticalAlignment="Top" Width="120" />
+            <TextBlock HorizontalAlignment="Left" Margin="1,1,0,0"  Text="Model Key" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="223,1,0,0" Text="Sweep Offset" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,0,0,0" Text="{Binding SweepOffset}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,29,0,0" Text="{Binding SweepInterval}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="223,29,0,0" Text="Sweep Interval" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="83,29,0,0" Text="{Binding ComponentId}" VerticalAlignment="Top" Width="120" />
+            <TextBlock HorizontalAlignment="Left" Margin="1,30,0,0" Text="Component Id" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="372,1,0,0" Text="Mesh Offset" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="472,0,0,0" Text="{Binding MeshOffsetX}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="533,0,0,0" Text="{Binding MeshOffsetY}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="594,0,0,0" Text="{Binding MeshOffsetZ}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="456,1,0,0" Text="X:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="518,1,0,0" Text="Y:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="579,0,0,0" Text="Z:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="372,30,0,0" Text="Mesh Scale" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="472,29,0,0" Text="{Binding MeshScaleX}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="533,29,0,0" Text="{Binding MeshScaleY}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="594,29,0,0" Text="{Binding MeshScaleZ}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="456,30,0,0" Text="X:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="518,30,0,0" Text="Y:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="579,29,0,0" Text="Z:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="372,59,0,0" Text="Mesh Rotation" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="472,58,0,0" Text="{Binding MeshRotationX}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="533,58,0,0" Text="{Binding MeshRotationY}" VerticalAlignment="Top" Width="40" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="594,58,0,0" Text="{Binding MeshRotationZ}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="456,59,0,0" Text="X:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="518,59,0,0" Text="Y:" VerticalAlignment="Top" />
+            <TextBlock HorizontalAlignment="Left" Margin="579,58,0,0" Text="Z:" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,58,0,0" Text="{Binding SweepLength}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="223,58,0,0" Text="Sweep length" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,87,0,0" Text="{Binding SweepStepInterval}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="223,87,0,0" Text="Step Interval" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,116,0,0" Text="{Binding SweepEndOffset}" VerticalAlignment="Top" Width="40" />
+            <TextBlock HorizontalAlignment="Left" Margin="223,116,0,0" Text="End Offset" VerticalAlignment="Top" />
+            <CheckBox Content="Distort" Height="16" HorizontalAlignment="Left" Margin="83,60,0,0" IsChecked="{Binding Distort}" VerticalAlignment="Top" />
+            <CheckBox Content="Repeat UV" Height="16" HorizontalAlignment="Left" IsChecked="{Binding RepeatUV}" Margin="83,87,0,0" VerticalAlignment="Top" />
+            <CheckBox Content="Round Sweep Interval" Height="16" HorizontalAlignment="Left" IsChecked="{Binding RoundSweepInterval}" Margin="356,89,0,0" VerticalAlignment="Top" />
+            <Button  HorizontalAlignment="Right" Margin="0,4,4,0" Cursor="Hand" VerticalAlignment="Top"  BorderBrush="{x:Null}" Click="Button_Click" Background="{x:Null}">
+                <Image Height="16" Width="16" Stretch="Fill"  Source="/SimCityPak;component/Images/cross.png" />
+            </Button>
+            <Button  HorizontalAlignment="Right" Margin="0,4,28,0" Cursor="Hand" VerticalAlignment="Top" Click="Button_Click_1" BorderBrush="{x:Null}" Background="{x:Null}">
+                <Image Height="16" Width="16" Stretch="Fill"  Source="/SimCityPak;component/Images/copy.png" />
+            </Button>
+            <TextBlock HorizontalAlignment="Left" Margin="209,146,0,0" Text="Component Tags" VerticalAlignment="Top" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="310,145,0,0" Text="{Binding ComponentTag1}" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="436,145,0,0" Text="{Binding ComponentTag2}" VerticalAlignment="Top" Width="120" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="562,145,0,0" Text="{Binding ComponentTag3}" VerticalAlignment="Top" Width="120" />
+            <!--RoundSweepInterval -->
+        </Grid>
+    </Border>
+</UserControl>

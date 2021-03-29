@@ -1,0 +1,40 @@
+﻿<Window x:Class="SimCityPak.Views.ViewAbout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About..." Height="404" Width="449" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="ToolWindow" Topmost="True">
+    <Grid>
+        <TextBlock Height="120" HorizontalAlignment="Left" Margin="12,91,0,0" Name="txtCreatedBy" VerticalAlignment="Top" Width="182" >
+            <Run FontWeight="Bold" Text="Created by:" /><LineBreak />
+            <Run Text="oppie (Project Lead)"></Run><LineBreak />
+            <Run Text="warrior" /><LineBreak />
+            <Run Text="elFarto" /><LineBreak />
+            <Run Text="AvdKolk" /><LineBreak />
+            <Run Text="Daniyy3l" /><LineBreak />    
+            <Run Text="trgs" /><LineBreak />
+        </TextBlock>
+        <TextBlock Height="55" HorizontalAlignment="Left" Margin="12,217,0,0" Name="txtThanks" VerticalAlignment="Top" Width="402" >
+            <Run FontWeight="Bold" Text="Special thanks to:" /><LineBreak />
+            <Run Text="Void for creating SporeMaster on which this tool is based" /><LineBreak />
+            <Run Text="Rick (Gibbed) for creating the Gibbed.Spore object model and helpers" /><LineBreak />
+            
+        </TextBlock>
+        <TextBlock Height="18" HorizontalAlignment="Left" Margin="12,67,0,0" Name="txtVersion" VerticalAlignment="Top" Width="310">
+            <Run Text="Version: " />
+            <Run Text="" Name="versionRun" />
+        </TextBlock>
+        <TextBlock Height="120" HorizontalAlignment="Left" Margin="200,91,0,0" Name="txtContrib" VerticalAlignment="Top" Width="214">
+            <Run FontWeight="Bold" Text="Contributors:" /><LineBreak />
+            <Run Text="ProcsKalone" /><LineBreak />  
+            <Run Text="Felgard" /><LineBreak />
+            <Run Text="frankc123" /><LineBreak />
+            <Run Text="xoxide101" /><LineBreak /><Run Text="potorius" /><LineBreak />
+        </TextBlock>
+        <Image Height="49" HorizontalAlignment="Left" Margin="8,12,0,0" Name="image1" Stretch="None" VerticalAlignment="Top" Width="314" Source="/SimCityPak;component/Images/Simcitypaklogo2.png" />
+        <TextBlock Height="55" HorizontalAlignment="Left" Margin="8,278,0,0" Name="txtMoreInformation" VerticalAlignment="Top" Width="402" TextWrapping="Wrap">
+           
+            <Run Text="For more information, go to: " /><LineBreak /><Hyperlink NavigateUri="http://simcitypak.codeplex.com/" RequestNavigate="Hyperlink_RequestNavigate">http://simcitypak.codeplex.com/</Hyperlink>
+            <LineBreak />
+            <Hyperlink NavigateUri="http://community.simtropolis.com/topic/53278-simcitypak-modding-tool/" RequestNavigate="Hyperlink_RequestNavigate">http://community.simtropolis.com/topic/53278-simcitypak-modding-tool/</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>

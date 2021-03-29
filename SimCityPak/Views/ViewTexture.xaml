@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="SimCityPak.ViewTexture"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="550" DataContextChanged="UserControl_DataContextChanged">
+    <Grid>
+        <Image Name="texturePreview" Stretch="None" Margin="0,0,0,33" />
+        <TextBlock Name="textBlockError" Visibility="Hidden" Text="TextBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" />
+        <Grid  Height="52" Name="gridProperties" VerticalAlignment="Bottom" Margin="0,0,0,33">
+            <TextBlock  HorizontalAlignment="Left" Margin="6,28,0,0" Name="lblWidth" Text="Width:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="6,6,0,0" Name="lblHeight" Text="Height:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="106,6,0,0" Name="txtHeight" Text="h" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="106,28,0,0" Name="txtWidth" Text="h" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="206,6,0,0" Name="lblMipMapInfo" Text="MipMap Info:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="306,6,0,0" Name="txtMipMapInfo" Text="h" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="206,28,0,0" Name="lblTextureType" Text="Texture Type:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="306,28,0,0" Name="txtTextureType" Text="h" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="406,6,0,0" Name="lblSection" Text="Texture Section:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="506,6,0,0" Name="txtSection" Text="h" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="406,28,0,0" Name="textBlock1" Text="Unknown:" VerticalAlignment="Top" Width="94" />
+            <TextBlock HorizontalAlignment="Left" Margin="506,28,0,0" Name="txtUnknown" Text="h" VerticalAlignment="Top" Width="94" />
+        </Grid>
+        <Border VerticalAlignment="Top" Margin="10" BorderBrush="SlateGray" Background="#FFF0F0F0" BorderThickness="1" >
+            <Menu Margin="5">
+                <MenuItem Header="Import" >
+                    <MenuItem Header="DXT5 .DDS" Name="mnuImportDDS" Click="mnuImportDDS_Click"  />
+                    <MenuItem Header="DXT8 .DDS" Name="mnuImportDXT8" Click="mnuImportDXT8_Click" />
+                    <MenuItem Header="Bitmap .BMP" Name="mnuImportBMP" Click="mnuImportBMP_Click" />
+                </MenuItem>
+                <MenuItem Header="Export" >
+                    <MenuItem Header="DXT .DDS" Name="mnuExportDDS8" Click="mnuExportDDS8_Click" />
+                    <MenuItem Header="DXT5 .DDS" Name="mnuExportDDS" Click="mnuExportDDS_Click" />
+                    <MenuItem Header="Bitmap .BMP" Name="mnuExportBMP" Click="mnuExportBMP_Click" />
+                </MenuItem>
+            </Menu>
+        </Border>
+    </Grid>
+</UserControl>

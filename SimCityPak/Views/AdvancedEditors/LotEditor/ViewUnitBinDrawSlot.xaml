@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="SimCityPak.Views.AdvancedEditors.LotEditor.ViewUnitBinDrawSlot"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="170" d:DesignWidth="830" >
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,13,0,0" Text="Randomize Slot:" VerticalAlignment="Top" />
+        <CheckBox Content="" Height="16" HorizontalAlignment="Left" IsChecked="{Binding RandomizeSlot}" Margin="126,13,0,0" Name="cbRandomizeSlot" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,42,0,0" Text="Percentage Fill:" VerticalAlignment="Top" />
+        <CheckBox Content="" Height="16" HorizontalAlignment="Left" IsChecked="{Binding PercentFill}" Margin="126,42,0,0" Name="cbPercentFill" VerticalAlignment="Top" />
+        <ListBox Height="100" HorizontalAlignment="Left" Margin="531,10,0,0" ItemsSource="{Binding BinDraw.IDs}" VerticalAlignment="Top" Width="120" />
+    </Grid>
+</UserControl>

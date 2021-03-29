@@ -1,0 +1,19 @@
+﻿<Window x:Class="SimCityPak.Views.ViewEditKeyProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Key Property" Height="132" Width="441" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Height="23"  HorizontalAlignment="Left" Margin="12,31,0,0" Name="txtTypeId" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23"  HorizontalAlignment="Left" Margin="138,31,0,0" Name="txtGroupContainer" VerticalAlignment="Top" Width="120" />
+        <TextBox Height="23"  HorizontalAlignment="Left" Margin="264,31,0,0" Name="txtInstanceId" VerticalAlignment="Top" Width="120" />
+        <Button Content="Cancel" Height="23" HorizontalAlignment="Right" Margin="0,58,88,0" Name="btnCancel" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+        <Button Content="Save" Height="23" Margin="0,58,7,0" Name="btnSave" VerticalAlignment="Top" Click="btnSave_Click" HorizontalAlignment="Right" Width="75" />
+        <TextBlock HorizontalAlignment="Left" Margin="12,12,0,0"  Text="TypeId" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="138,12,0,0" Text="GroupContainer" VerticalAlignment="Top" />
+        <TextBlock HorizontalAlignment="Left" Margin="264,12,0,0" Text="InstanceId" VerticalAlignment="Top" />
+        <Button Content="Paste Key" HorizontalAlignment="Left" Margin="12,58,0,0" VerticalAlignment="Top" Width="91" Name="btnPasteKey" Click="btnPasteKey_Click" Height="23" />
+        <Button  Background="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Margin="390,31,0,0" Name="btnGenerate" VerticalAlignment="Top" Click="btnGenerate_Click" ToolTip="Generate Random Instance Id"  >
+            <Image Stretch="Uniform"  Height="16" Source="/SimCityPak;component/Images/16x16_dice.png" />
+        </Button>
+    </Grid>
+</Window>

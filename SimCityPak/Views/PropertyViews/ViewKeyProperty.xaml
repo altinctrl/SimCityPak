@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="SimCityPak.ViewKeyProperty"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="30" DataContextChanged="UserControl_DataContextChanged_1">
+    <UserControl.ContextMenu>
+        <ContextMenu>
+            <MenuItem Name="mnuSearch" Header="Search" Click="mnuSearch_Click"/>
+        </ContextMenu>
+    </UserControl.ContextMenu>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Width="140" >
+      
+                <Run Text="{Binding TypeName, Mode=OneWay}" Name="txtType"  />
+
+            </TextBlock>
+            <TextBlock Width="140" >
+       
+                    <Run Text="{Binding GroupName, Mode=OneWay}" Name="txtGroup" />
+
+            </TextBlock>
+            <TextBlock Width="249" Margin="0,0,0,-0.059">
+                <Hyperlink Click="openKey_Click">
+                    <Run Text="{Binding InstanceName, Mode=OneWay}" Name="txtInstanceName"  />
+                </Hyperlink>
+                <Run Text="()" Name="resultsCount"/>
+                <Run Text="{Binding InstanceId, Mode=OneWay, StringFormat=X}" Name="txtInstanceId" />
+            </TextBlock>
+        </StackPanel>
+        <Button HorizontalAlignment="Right" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/SimCityPak;component/Images/edit.png" Cursor="Hand" Height="16" Width="16" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</UserControl>
